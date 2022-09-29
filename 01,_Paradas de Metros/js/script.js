@@ -8,9 +8,27 @@ let img6 = document.getElementById("img6");
 let img7 = document.getElementById("img7");
 let img8 = document.getElementById("img8");
 
-const mostarTexto = () =>{
+const mostarTextoimg1 = () =>{
     info.textContent = img1.getAttribute("src");
 }
 
-img1.addEventListener("click",mostarTexto);
+const mostarTextoimg2 = () =>{
+    info.textContent = img2.getAttribute("src");
+}
 
+const mostarTextoimg3 = () =>{
+    info.textContent = img3.getAttribute("src");
+}
+
+const mostarTextoimg4 = () =>{
+    info.textContent = img4.getAttribute("src");
+}
+
+const mostarTextoimg5 = () =>{
+    info.textContent = img5.getAttribute("src");
+}
+
+img1.addEventListener("click",mostarTextoimg1);
+img2.addEventListener("click",mostarTextoimg2);
+img3.addEventListener("click",mostarTextoimg3);
+img4.addEventListener("click",mostarTextoimg4);
