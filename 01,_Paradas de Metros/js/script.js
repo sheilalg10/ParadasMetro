@@ -11,6 +11,7 @@ let img5 = document.getElementById("img5");
 let img6 = document.getElementById("img6");
 let img7 = document.getElementById("img7");
 let img8 = document.getElementById("img8");
+let main = document.getElementsByTagName("main");
 
 // const mostarTextoimg1 = () =>{
 //     info.textContent = img1.src.slice(img1.src.lastIndexOf("/")+1,img1.src.lastIndexOf("."));;
@@ -56,7 +57,7 @@ let img8 = document.getElementById("img8");
 
 const clickImagen = (img) =>{
     let pos;
-    
+
     do{
         pos=Math.floor(Math.random()*imagenes.length);
     }while (imagenes[pos] == img.src.slice(img.src.lastIndexOf("/")+1));
@@ -67,42 +68,18 @@ const clickImagen = (img) =>{
 }
 
 
-img1.addEventListener("click",()=> clickImagen(img1));
-img2.addEventListener("click",()=> clickImagen(img2));
-img3.addEventListener("click",()=> clickImagen(img3));
-img4.addEventListener("click",()=> clickImagen(img4));
-img5.addEventListener("click",()=> clickImagen(img5));
-img6.addEventListener("click",()=> clickImagen(img6));
-img7.addEventListener("click",()=> clickImagen(img7));
-img8.addEventListener("click",()=> clickImagen(img8));
+// img1.addEventListener("click",()=> clickImagen(img1));
+// img2.addEventListener("click",()=> clickImagen(img2));
+// img3.addEventListener("click",()=> clickImagen(img3));
+// img4.addEventListener("click",()=> clickImagen(img4));
+// img5.addEventListener("click",()=> clickImagen(img5));
+// img6.addEventListener("click",()=> clickImagen(img6));
+// img7.addEventListener("click",()=> clickImagen(img7));
+// img8.addEventListener("click",()=> clickImagen(img8));
 
 
-
-
-// const mostrarAleatorio = (img) => {
-//     let pos;
-
-//     do{
-//         pos=Math.floor(Math.random()*imagenes.length);
-        
-//     }while(imagenes[pos]== img.src.slice(img.src.lastIndexOf("/")+1));
-
-//     img.src="imagenes/"+ imagenes[pos];
-//     info.textContent = img.src.slice(img1.src.lastIndexOf("/")+1,img8.src.lastIndexOf("."));
-// }
-
-// img1.addEventListener("click",()=> mostrarAleatorio(img1))
-
-// img2.addEventListener("click",()=> mostrarAleatorio(img2))
-
-// img3.addEventListener("click",()=> mostrarAleatorio(img3))
-
-// img4.addEventListener("click",()=> mostrarAleatorio(img4))
-
-// img5.addEventListener("click",()=> mostrarAleatorio(img5))
-
-// img6.addEventListener("click",()=> mostrarAleatorio(img6))
-
-// img7.addEventListener("click",()=> mostrarAleatorio(img7))
-
-// img8.addEventListener("click",()=> mostrarAleatorio(img8))
+main.addEventListener("click",(event)=>{
+    if(event.target.tagName == "IMG"){
+        clickImagen(event.target)
+    }
+})
